@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: backend-user
+  name: backend-user
+spec:
+  selector:
+    matchLabels:
+      run: backend-user
+  template:
+    metadata:
+      labels:
+        run: backend-user
+    spec:
+      containers:
+        - name: udacity-restapi-user
+          image: claudioacioli/udacity-restapi-user
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"

@@ -2,21 +2,31 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    run: backend-user
+    service: backend-user
   name: backend-user
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      run: backend-user
+      service: backend-user
   template:
     metadata:
       labels:
-        run: backend-user
+        service: backend-user
     spec:
       containers:
         - name: udacity-restapi-user
           image: claudioacioli/udacity-restapi-user
           imagePullPolicy: Always
+          env:
+            - name: POSTGRESS_HOST
+              value: "host"
+            - name: POSTGRESS_USERNAME
+              value: "db"
+            - name: POSTGRESS_PASSWORD
+              value: "password"
+            - name: POSTGRESS_DB
+              value: "database"
           resources:
             requests:
               memory: "64Mi"

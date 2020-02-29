@@ -33,6 +33,9 @@ Developer mode runs off the TypeScript source. Any saves will reset the server a
 
 ## Running the Server Locally on Docker
 
+There is a docker image for this project on DockerHub:
+[claudioacioli/udacity-restapi-user](https://hub.docker.com/repository/docker/claudioacioli/udacity-restapi-user)
+
 To run this on Docker, open terminal and run:
 
 ```bash

@@ -21,6 +21,7 @@ npm install
 ```
 >_tip_: **npm i** is shorthand for **npm install**
 
+
 ## Running the Server Locally
 To run the server locally in developer mode, open terminal and run:
 ```bash
@@ -29,7 +30,8 @@ npm run dev
 
 Developer mode runs off the TypeScript source. Any saves will reset the server and run the latest version of the codebase. 
 
-## Running the server Locally on Docker
+
+## Running the Server Locally on Docker
 
 To run this on Docker, open terminal and run:
 
@@ -37,7 +39,8 @@ To run this on Docker, open terminal and run:
 docker run --rm --publish 8080:8080 -v $HOME/.aws:/root/.aws --env POSTGRESS_HOST=$POSTGRESS_HOST --env POSTGRESS_USERNAME=$POSTGRESS_USERNAME --env POSTGRESS_PASSWORD=$POSTGRESS_PASSWORD --env POSTGRESS_DB=$POSTGRESS_DB --env AWS_REGION=$AWS_REGION --env AWS_PROFILE=$AWS_PROFILE --env AWS_BUCKET=$AWS_BUCKET --env JWT_SECRET=$JWT_SECRET --name user claudioacioli/udacity-restapi-user
 ```
 
-## Running the server Locally on Minikube
+
+## Running the Server Locally on Minikube
 
 To run this on Minikube, first start Minikube:
 

@@ -22,7 +22,7 @@ spec:
             - name: POSTGRESS_HOST
               value: "host"
             - name: POSTGRESS_USERNAME
-              value: "db"
+              value: "username"
             - name: POSTGRESS_PASSWORD
               value: "password"
             - name: POSTGRESS_DB
